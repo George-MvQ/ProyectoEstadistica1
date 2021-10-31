@@ -5,18 +5,27 @@
  */
 package Proyecto;
 
+import java.awt.Color;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author George Vasquez
  */
 public class Menu extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Menu
-     */
+    int xx;
+    int xy;
+
     public Menu() {
-        
+        setUndecorated(true);
+        setBackground(new Color(0, 0, 0, 0));
+
         initComponents();
+        jPanel2.setBackground(new Color(57, 62, 70, 190));
+
     }
 
     /**
@@ -28,133 +37,244 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jSplitPane1 = new javax.swing.JSplitPane();
+        jPanel2 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         botonT2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         botonTeorema6 = new javax.swing.JButton();
         botonTeorema7 = new javax.swing.JButton();
         botonTeorema8 = new javax.swing.JButton();
         botonTeorema9 = new javax.swing.JButton();
+        botonTeorema10 = new javax.swing.JButton();
+        botonTeorema11 = new javax.swing.JButton();
+        botonTeorema12 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Regresar");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+        jPanel2.setBackground(new java.awt.Color(51, 0, 204));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel2MouseDragged(evt);
             }
         });
-
-        jButton2.setText("Cerrar");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel2MousePressed(evt);
             }
         });
+        jPanel2.setLayout(null);
 
-        jButton3.setText("Teorema 1");
-        jButton3.setActionCommand("TEOREMA 1");
+        jButton3.setBackground(new java.awt.Color(255, 153, 0));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("TEOREMA 1");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
             }
         });
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton3);
+        jButton3.setBounds(32, 91, 167, 77);
 
+        botonT2.setBackground(new java.awt.Color(0, 0, 0));
+        botonT2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        botonT2.setForeground(new java.awt.Color(255, 255, 255));
         botonT2.setText("TEOREMA 2");
         botonT2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botonT2MouseClicked(evt);
             }
         });
+        botonT2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonT2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(botonT2);
+        botonT2.setBounds(209, 91, 167, 77);
 
+        jButton4.setBackground(new java.awt.Color(255, 153, 0));
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("TEOREMA 3");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton4);
+        jButton4.setBounds(386, 91, 167, 77);
 
+        jButton5.setBackground(new java.awt.Color(0, 0, 0));
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("TEOREMA 4");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton5);
+        jButton5.setBounds(32, 174, 167, 77);
+
+        jButton6.setBackground(new java.awt.Color(255, 153, 0));
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("TEOREMA 5");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton6);
+        jButton6.setBounds(209, 174, 167, 77);
+
+        botonTeorema6.setBackground(new java.awt.Color(0, 0, 0));
+        botonTeorema6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        botonTeorema6.setForeground(new java.awt.Color(255, 255, 255));
         botonTeorema6.setText("TEOREMA 6");
         botonTeorema6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonTeorema6ActionPerformed(evt);
             }
         });
+        jPanel2.add(botonTeorema6);
+        botonTeorema6.setBounds(386, 174, 167, 77);
 
+        botonTeorema7.setBackground(new java.awt.Color(255, 153, 0));
+        botonTeorema7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        botonTeorema7.setForeground(new java.awt.Color(255, 255, 255));
         botonTeorema7.setText("TEOREMA 7");
         botonTeorema7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonTeorema7ActionPerformed(evt);
             }
         });
+        jPanel2.add(botonTeorema7);
+        botonTeorema7.setBounds(32, 257, 167, 77);
 
+        botonTeorema8.setBackground(new java.awt.Color(0, 0, 0));
+        botonTeorema8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        botonTeorema8.setForeground(new java.awt.Color(255, 255, 255));
         botonTeorema8.setText("TEOREMA 8");
         botonTeorema8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonTeorema8ActionPerformed(evt);
             }
         });
+        jPanel2.add(botonTeorema8);
+        botonTeorema8.setBounds(209, 257, 167, 77);
 
+        botonTeorema9.setBackground(new java.awt.Color(255, 153, 0));
+        botonTeorema9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        botonTeorema9.setForeground(new java.awt.Color(255, 255, 255));
         botonTeorema9.setText("TEOREMA 9");
         botonTeorema9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonTeorema9ActionPerformed(evt);
             }
         });
+        jPanel2.add(botonTeorema9);
+        botonTeorema9.setBounds(386, 257, 167, 77);
+
+        botonTeorema10.setBackground(new java.awt.Color(0, 0, 0));
+        botonTeorema10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        botonTeorema10.setForeground(new java.awt.Color(255, 255, 255));
+        botonTeorema10.setText("TEOREMA 10");
+        botonTeorema10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonTeorema10ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(botonTeorema10);
+        botonTeorema10.setBounds(32, 340, 167, 77);
+
+        botonTeorema11.setBackground(new java.awt.Color(255, 153, 0));
+        botonTeorema11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        botonTeorema11.setForeground(new java.awt.Color(255, 255, 255));
+        botonTeorema11.setText("TEOREMA 11");
+        botonTeorema11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonTeorema11ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(botonTeorema11);
+        botonTeorema11.setBounds(209, 340, 167, 77);
+
+        botonTeorema12.setBackground(new java.awt.Color(0, 0, 0));
+        botonTeorema12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        botonTeorema12.setForeground(new java.awt.Color(255, 255, 255));
+        botonTeorema12.setText("TEOREMA 12");
+        botonTeorema12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonTeorema12ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(botonTeorema12);
+        botonTeorema12.setBounds(386, 340, 167, 77);
+
+        jButton1.setBackground(new java.awt.Color(153, 153, 153));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("REGRESAR");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(30, 460, 210, 62);
+
+        jButton2.setBackground(new java.awt.Color(153, 153, 153));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("CERRAR");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton2);
+        jButton2.setBounds(335, 460, 220, 62);
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 204));
+        jLabel1.setFont(new java.awt.Font("Jokerman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("CONTENIDO");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(222, 23, 159, 37);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(37, 37, 37))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botonTeorema9)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3)
-                            .addComponent(jButton4)
-                            .addComponent(botonTeorema7))
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(botonTeorema8)
-                            .addComponent(botonTeorema6)
-                            .addComponent(botonT2))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(botonT2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(botonTeorema6))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(botonTeorema7))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(botonTeorema8)))
-                .addGap(17, 17, 17)
-                .addComponent(botonTeorema9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(23, 23, 23))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
         );
 
         pack();
@@ -163,53 +283,52 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
 
-Inicio principio = new Inicio();
-principio.setVisible(true);
-this.dispose();
-
+        Inicio principio = new Inicio();
+        principio.setVisible(true);
+        this.dispose();
 
 
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-    this.dispose();
+        this.dispose();
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         Teorema_1 t1 = new Teorema_1();
         t1.setVisible(true);
         this.dispose();
-        
+
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void botonT2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonT2MouseClicked
-        Teorema_2 t2= new Teorema_2();
+        Teorema_2 t2 = new Teorema_2();
         t2.setVisible(true);
         this.dispose();
-        
-        
+
+
     }//GEN-LAST:event_botonT2MouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-    Teorema_3 t3= new Teorema_3();
+        Teorema_3 t3 = new Teorema_3();
         t3.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void botonTeorema6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTeorema6ActionPerformed
-         Teorema_6 t6 = new Teorema_6();
+        Teorema_6 t6 = new Teorema_6();
         t6.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonTeorema6ActionPerformed
 
     private void botonTeorema7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTeorema7ActionPerformed
-         Teorema_7 t7 = new Teorema_7();
+        Teorema_7 t7 = new Teorema_7();
         t7.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonTeorema7ActionPerformed
 
     private void botonTeorema8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTeorema8ActionPerformed
-         Teorema_8 t8 = new Teorema_8();
+        Teorema_8 t8 = new Teorema_8();
         t8.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonTeorema8ActionPerformed
@@ -219,6 +338,63 @@ this.dispose();
         t9.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonTeorema9ActionPerformed
+
+    private void botonTeorema10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTeorema10ActionPerformed
+        Teorema_10 t10 = new Teorema_10();
+        t10.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonTeorema10ActionPerformed
+
+    private void botonTeorema11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTeorema11ActionPerformed
+        Teorema_11 t11 = new Teorema_11();
+        t11.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonTeorema11ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        Teorema_4 t4 = new Teorema_4();
+        t4.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Teorema_5 t5 = new Teorema_5();
+        t5.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void botonTeorema12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTeorema12ActionPerformed
+        Teorema_12 t12 = new Teorema_12();
+        t12.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonTeorema12ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
+        xx = evt.getX();
+        xy = evt.getY();
+    }//GEN-LAST:event_jPanel2MousePressed
+
+    private void botonT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonT2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonT2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+         int x = evt.getXOnScreen();
+int y = evt.getYOnScreen();
+this.setLocation(x - xx, y - xy);
+    }//GEN-LAST:event_jPanel2MouseDragged
 
     /**
      * @param args the command line arguments
@@ -252,11 +428,14 @@ this.dispose();
             public void run() {
                 new Menu().setVisible(true);
             }
-         });
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonT2;
+    private javax.swing.JButton botonTeorema10;
+    private javax.swing.JButton botonTeorema11;
+    private javax.swing.JButton botonTeorema12;
     private javax.swing.JButton botonTeorema6;
     private javax.swing.JButton botonTeorema7;
     private javax.swing.JButton botonTeorema8;
@@ -265,5 +444,10 @@ this.dispose();
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,6 +1,6 @@
-
 package Proyecto;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,8 +13,14 @@ public class Teorema_8 extends javax.swing.JFrame {
      * Creates new form Teorema_8
      */
     public Teorema_8() {
+        setUndecorated(true);
+        setBackground(new Color(0, 0, 0, 0));
         initComponents();
-          //para centrar en pantalla ui al iniciar
+        //para centrar en pantalla ui al iniciar
+        jPanel1.setBackground(new Color(212, 236, 221));
+        jPanel2.setBackground(new Color(212, 236, 221));
+        jPanel3.setBackground(new Color(52, 91, 99, 150));
+        //jLabel18.setFont(new java.awt.Font("Tahoma", 0, 25));
         setLocationRelativeTo(null);
     }
 
@@ -27,8 +33,13 @@ public class Teorema_8 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jlabelRespuesta = new javax.swing.JLabel();
         jtextFieldPA = new javax.swing.JTextField();
@@ -55,19 +66,74 @@ public class Teorema_8 extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel3MouseDragged(evt);
+            }
+        });
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel3MousePressed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setText("MENU");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jTabbedPane1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jTabbedPane1MouseDragged(evt);
+            }
+        });
+        jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTabbedPane1MousePressed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
+        jLabel7.setText("TEOREMA 8");
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel17.setText("Para tres eventos A, B y C. ");
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("P(A B C) = P(A) + P(B) + P(C) - P(A ∩ B) - P(A ∩ C) - P(B ∩ C) + P(A ∩ B ∩ C).");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
+            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addGap(180, 180, 180))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(283, 283, 283))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel7)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel17)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("CONCEPTO Y FORMULA", jPanel1);
@@ -181,6 +247,7 @@ public class Teorema_8 extends javax.swing.JFrame {
         jPanel2.add(jLabel14);
         jLabel14.setBounds(740, 90, 50, 14);
 
+        jbotonCalcular.setBackground(new java.awt.Color(0, 255, 204));
         jbotonCalcular.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jbotonCalcular.setText("CALCULAR");
         jbotonCalcular.addActionListener(new java.awt.event.ActionListener() {
@@ -191,6 +258,7 @@ public class Teorema_8 extends javax.swing.JFrame {
         jPanel2.add(jbotonCalcular);
         jbotonCalcular.setBounds(80, 270, 100, 50);
 
+        jButton3.setBackground(new java.awt.Color(0, 255, 204));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton3.setText("LIMPIAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -215,31 +283,36 @@ public class Teorema_8 extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("CALCULADORA TEOREMA 8", jPanel2);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton1.setText("MENU");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(361, 361, 361)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(352, 352, 352))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -252,32 +325,57 @@ public class Teorema_8 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    jlabelRespuesta.setText("---------");
-    jtextFieldPA.setText("");
-    jtextFieldPAnB.setText("");
-    jtextFieldPAnBnC.setText("");
-    jtextFieldPAnC.setText("");
-    jtextFieldPB.setText("");
-    jtextFieldPBnC.setText("");
-    jtextFieldPC.setText(""); 
-        
+        jlabelRespuesta.setText("---------");
+        jtextFieldPA.setText("");
+        jtextFieldPAnB.setText("");
+        jtextFieldPAnBnC.setText("");
+        jtextFieldPAnC.setText("");
+        jtextFieldPB.setText("");
+        jtextFieldPBnC.setText("");
+        jtextFieldPC.setText("");
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jbotonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbotonCalcularActionPerformed
-           
-        try{
-        jlabelRespuesta.setText(Double.toString( (double)Math.round(  Funcion.teoremaOcho(
-                (float)Double.parseDouble( jtextFieldPA.getText()), 
-                (float)Double.parseDouble( jtextFieldPB.getText()), 
-                (float)Double.parseDouble( jtextFieldPC.getText()),
-                (float)Double.parseDouble( jtextFieldPAnB.getText()), 
-                (float)Double.parseDouble( jtextFieldPAnC.getText()), 
-                (float)Double.parseDouble( jtextFieldPBnC.getText()),
-                (float)Double.parseDouble( jtextFieldPAnBnC.getText()))*100)/100));
-        }catch (Exception e){  JOptionPane.showMessageDialog(null,"Error al ingresar los datos\nPor favor vuelva a intentar\n"+ e);}
-    }//GEN-LAST:event_jbotonCalcularActionPerformed
 
-    
+        try {
+            jlabelRespuesta.setText(Double.toString((double) Math.round(Funcion.teoremaOcho(
+                    (float) Double.parseDouble(jtextFieldPA.getText()),
+                    (float) Double.parseDouble(jtextFieldPB.getText()),
+                    (float) Double.parseDouble(jtextFieldPC.getText()),
+                    (float) Double.parseDouble(jtextFieldPAnB.getText()),
+                    (float) Double.parseDouble(jtextFieldPAnC.getText()),
+                    (float) Double.parseDouble(jtextFieldPBnC.getText()),
+                    (float) Double.parseDouble(jtextFieldPAnBnC.getText())) * 100) / 100));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error al ingresar los datos\nPor favor vuelva a intentar\n" + e);
+        }
+    }//GEN-LAST:event_jbotonCalcularActionPerformed
+    int xx;
+    int xy;
+    private void jTabbedPane1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MousePressed
+
+        xx = evt.getX();
+        xy = evt.getY();
+    }//GEN-LAST:event_jTabbedPane1MousePressed
+
+    private void jTabbedPane1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xx, y - xy);
+    }//GEN-LAST:event_jTabbedPane1MouseDragged
+
+    private void jPanel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MousePressed
+        xx = evt.getX();
+        xy = evt.getY();
+    }//GEN-LAST:event_jPanel3MousePressed
+
+    private void jPanel3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xx, y - xy);
+    }//GEN-LAST:event_jPanel3MouseDragged
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -321,15 +419,19 @@ public class Teorema_8 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton jbotonCalcular;
     private javax.swing.JLabel jlabelRespuesta;
